@@ -28,3 +28,21 @@ select * from demo.customers_data where BirthDate like "%1980";
 select FirstName,LastName,AnnualIncome,BirthDate from demo.customers_data where BirthDate like "%1980";
 
 
+
+
+
+
+
+                                             -- Order by
+select * from demo.customers_data order by BirthDate asc;
+select * from demo.customers_data order by CustomerKey desc;
+
+select FirstName,LastName,BirthDate,AnnualIncome,TotalChildren from demo.customers_data order by TotalChildren asc;
+
+select * from demo.customers_data order by FirstName asc, TotalChildren desc;
+
+select * from demo.customers_data order by LastName asc , AnnualIncome desc;
+
+select * from demo.customers_data order by FirstName,LastName asc;
+
+
