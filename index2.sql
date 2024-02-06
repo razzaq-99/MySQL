@@ -13,3 +13,18 @@ select * from demo.customers_data where not Gender='M';
 select * from demo.customers_data where not Gender='NA';
 select * from demo.customers_data where not EmailAddress='katherine23@adventure-works.com';
 select Prefix,AnnualIncome,TotalChildren from demo.customers_data where not FirstName = "Micheal";
+
+
+
+
+
+                                           -- LIKE OPERATOR
+select * from demo.customers_data where FirstName like "%CHAR%";
+select * from demo.customers_data where FirstName like "CHAR%";
+
+select FirstName,LastName,Gender,BirthDate from demo.customers_data where LastName like "%ILL";
+select * from demo.customers_data where BirthDate like "%1980";
+
+select FirstName,LastName,AnnualIncome,BirthDate from demo.customers_data where BirthDate like "%1980";
+
+
