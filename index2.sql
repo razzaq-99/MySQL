@@ -58,4 +58,12 @@ select FirstName,LastName,BirthDate from demo.customers_data order by BirthDate 
 
 
 
+                                          -- BETWEEN in mysql
+select * from demo.customers_data where CustomerKey between 11000 and 11015;
+
+select * from demo.customers_data where TotalChildren between 0 and 2;
+
+select * from demo.customers_data where AnnualIncome between "$40,000" and "$60,000";
+
+
                                           
