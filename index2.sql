@@ -46,3 +46,16 @@ select * from demo.customers_data order by LastName asc , AnnualIncome desc;
 select * from demo.customers_data order by FirstName,LastName asc;
 
 
+
+                                           -- LIMIT CLAUSE
+                                           
+select * from demo.customers_data order by AnnualIncome limit 3;
+
+select * from demo.customers_data where FirstName = "MITCHELL" limit 5;
+
+select FirstName,LastName,BirthDate from demo.customers_data order by BirthDate desc limit 10;
+
+
+
+
+                                          
