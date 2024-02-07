@@ -83,3 +83,28 @@ select FirstName,LastName,BirthDate,AnnualIncome from demo.customers_data where 
 select FirstName,LastName,AnnualIncome from demo.customers_data where AnnualIncome not in ("$20,000","$90,000");
 
 
+
+
+
+                                                   -- String functions
+select * from movies.flixpatrol;
+
+-- concat() method 
+select concat(Type," - ",Genre) as Overall from movies.flixpatrol;
+select concat(Title," - ",Watchtime) as Popularity from movies.flixpatrol;
+select concat(Title," -  ",Watchtime ) as Popularity from movies.flixpatrol;
+select concat(Type," - ",Genre) as Overall from movies.flixpatrol where Genre = "Fantasy";
+select concat(Type," - ",Genre) as Overall from movies.flixpatrol where Premiere = "2021";
+
+
+-- length() method
+select length(Type) as types from movies.flixpatrol;
+select Genre , length(Genre) as Genre_length from movies.flixpatrol;
+select Title, length(Title) as Title_Length from movies.flixpatrol;
+
+
+-- Upper case 
+select upper(Genre) as Genre from movies.flixpatrol;
+select upper(Type) as Type from movies.flixpatrol;
+
+
