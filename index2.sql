@@ -67,3 +67,19 @@ select * from demo.customers_data where AnnualIncome between "$40,000" and "$60,
 
 
                                           
+
+                                            -- IN/NOT IN in Mysql
+select * from demo.customers_data;
+select * from demo.customers_data where TotalChildren in (0,2);
+
+select * from demo.customers_data where AnnualIncome in ("$20,000","$60,000");
+
+select * from demo.customers_data where TotalChildren not in (0,2);
+
+select * from demo.customers_data where FirstName in ("Micheal","MITCHELL") and TotalChildren in (0,2);
+
+select FirstName,LastName,BirthDate,AnnualIncome from demo.customers_data where FirstName in ("Micheal","MITCHELL") and TotalChildren in (0,2);
+
+select FirstName,LastName,AnnualIncome from demo.customers_data where AnnualIncome not in ("$20,000","$90,000");
+
+
