@@ -108,3 +108,15 @@ select upper(Genre) as Genre from movies.flixpatrol;
 select upper(Type) as Type from movies.flixpatrol;
 
 
+-- sum function 
+select sum(TotalChildren) from demo.customers_data ;
+select sum(CustomerKey) from demo.customers_data;
+select count(CustomerKey) from demo.customers_data;
+select * from demo.customers_data;
+select * from movies.flixpatrol;
+
+-- average 
+select avg(TotalChildren) from demo.customers_data;
+select avg(Premiere) from movies.flixpatrol;
+
+
