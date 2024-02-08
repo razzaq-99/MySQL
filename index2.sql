@@ -119,4 +119,11 @@ select * from movies.flixpatrol;
 select avg(TotalChildren) from demo.customers_data;
 select avg(Premiere) from movies.flixpatrol;
 
+-- max and min
+select max(TotalChildren) from demo.customers_data;
+select min(TotalChildren) from demo.customers_data;
+
+select truncate(TotalChildren,1) from demo.customers_data;
+select ceil(TotalChildren) from demo.customers_data;
+
 
