@@ -17,3 +17,17 @@ case
     else "Still need some improvemnets"
 end as Sale_report
 from classic_models.products;
+
+
+
+
+
+
+								-- Group By
+select * from classic_models.products;
+select productLine,sum(buyPrice) from classic_models.products group by productLine;
+select productName,sum(quantityInStock) from classic_models.products group by productName;
+select productLine,avg(buyPrice) from classic_models.products group by productLine;
+select productLine,max(buyPrice) from classic_models.products group by productLine;
+select productLine,count(buyPrice) from classic_models.products group by productLine;
+
