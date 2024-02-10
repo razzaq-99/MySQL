@@ -31,3 +31,13 @@ select productLine,avg(buyPrice) from classic_models.products group by productLi
 select productLine,max(buyPrice) from classic_models.products group by productLine;
 select productLine,count(buyPrice) from classic_models.products group by productLine;
 
+
+
+
+                                  -- Having Clause
+select * from classic_models.products;
+select productName, sum(quantityInStock) from classic_models.products group by productName having sum(quantityInStock) < 1000;
+select productName, sum(quantityInStock) from classic_models.products group by productName having sum(quantityInStock) < 500 order by avg(quantityInStock) desc;
+select productName, avg(quantityInStock) from classic_models.products group by productName having avg(quantityInStock) < 1000 order by avg(quantityInStock) asc;
+
+
