@@ -41,3 +41,27 @@ select productName, sum(quantityInStock) from classic_models.products group by p
 select productName, avg(quantityInStock) from classic_models.products group by productName having avg(quantityInStock) < 1000 order by avg(quantityInStock) asc;
 
 
+
+
+                                            -- Joins 
+select * from classic_models.order_details;
+select * from classic_models.products;
+
+
+-- Inner Join in mysql 
+select products.productName,order_details.quantityOrdered from classic_models.products
+inner join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode;
+
+select products.productName,products.buyPrice,order_details.quantityOrdered,order_details.priceEach
+from classic_models.products inner join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode;
+
+select products.productName,order_details.quantityOrdered from classic_models.products
+inner join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode order by quantityOrdered asc;
+
+select products.productName,sum(order_details.quantityOrdered) from classic_models.products
+inner join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode group by productName;
+
