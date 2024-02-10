@@ -90,3 +90,18 @@ group by productName ;
 select products.productName,order_details.quantityOrdered from 
 classic_models.products left join classic_models.order_details on 
 classic_models.products.productCode = classic_models.order_details.productCode;
+
+
+
+-- cross join
+select products.productName,order_details.quantityOrdered from 
+classic_models.products cross join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode;
+
+select * from classic_models.products cross join classic_models.order_details;
+
+select products.productName,order_details.quantityOrdered from 
+classic_models.products cross join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode
+order by quantityOrdered desc;
+
