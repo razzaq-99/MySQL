@@ -65,3 +65,28 @@ select products.productName,sum(order_details.quantityOrdered) from classic_mode
 inner join classic_models.order_details on 
 classic_models.products.productCode = classic_models.order_details.productCode group by productName;
 
+
+
+-- left and right join
+select products.productName,order_details.quantityOrdered from 
+classic_models.products left join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode;
+
+select products.productName,order_details.quantityOrdered from 
+classic_models.products left join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode
+order by quantityOrdered asc;
+
+select products.productName, sum(order_details.quantityOrdered) from 
+classic_models.products left join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode 
+group by productName ;
+
+select products.productName, sum(order_details.quantityOrdered) from 
+classic_models.products right join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode 
+group by productName ;
+
+select products.productName,order_details.quantityOrdered from 
+classic_models.products left join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode;
