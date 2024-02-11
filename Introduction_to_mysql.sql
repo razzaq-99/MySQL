@@ -105,3 +105,16 @@ classic_models.products cross join classic_models.order_details on
 classic_models.products.productCode = classic_models.order_details.productCode
 order by quantityOrdered desc;
 
+
+-- Full Join 
+select * from classic_models.order_details;
+select * from classic_models.products;
+
+
+select products.productName,order_details.quantityOrdered from 
+classic_models.products full join classic_models.order_details on 
+classic_models.products.productCode = classic_models.order_details.productCode
+order by quantityOrdered desc;
+
+
+select * from classic_models.products full join classic_models.order_details;
