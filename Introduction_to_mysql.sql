@@ -118,3 +118,37 @@ order by quantityOrdered desc;
 
 
 select * from classic_models.products full join classic_models.order_details;
+
+
+
+
+
+
+                                      -- Subqueries
+
+select * from classic_models.order_details;
+select * from classic_models.products;
+
+select avg(buyPrice) from classic_models.products;
+select * from classic_models.products where buyPrice > 53.38;
+
+select * from classic_models.products where buyPrice >
+(select avg(buyPrice) from classic_models.products);
+
+select * from classic_models.products where buyPrice <
+(select avg(buyPrice) from classic_models.products);
+
+select * from classic_models.products where buyPrice =
+(select max(buyPrice) from classic_models.products);
+
+select * from classic_models.products where buyPrice =
+(select min(buyPrice) from classic_models.products);
+
+select orderLineNumber from classic_models.order_details where
+order_details.productCode not in (select products.productName from classic_models.products);
+
+select products.productName from classic_models.products where
+products.productCode not in (select order_details.orderLineNumber from classic_models.order_details);
+
+select products.productName from classic_models.products where
+products.productCode not in (select order_details.orderLineNumber from classic_models.order_details);
